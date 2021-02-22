@@ -4,7 +4,9 @@ import Content from './Content';
 
 export default function Layout() {
     return(
-        <Navbar/>
-        <Content/>
+        <>
+            <Navbar/>
+            <Content/>
+        </>
     );
 }
