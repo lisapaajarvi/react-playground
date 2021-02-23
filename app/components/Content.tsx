@@ -16,5 +16,6 @@ const contentBox: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '80%'
+    height: '80%',
+    alignItems: 'center'
 }

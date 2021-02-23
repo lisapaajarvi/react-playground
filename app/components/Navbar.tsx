@@ -3,7 +3,7 @@ import React, { CSSProperties } from 'react';
 export default function Navbar() {
     return(
         <div style={navbar}>
-            <h1 style={title}>Navbar</h1>
+            <h1 style={title}>Titel</h1>
         </div>
     );
 }
