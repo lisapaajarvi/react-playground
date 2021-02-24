@@ -6,8 +6,6 @@ interface Props {
 }
 export default function MasterView(props: Props) {
 
-
-
     return(
         <div style={contentBox}>
             {props.sectionIds.map((value) => 
@@ -22,5 +20,5 @@ const contentBox: CSSProperties = {
     height: '100%',
     margin: '0.5rem',
     justifyItems: 'stretch',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
 }
