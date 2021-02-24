@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
 import SectionItem from './SectionItem';
 
-export default function Content() {
+export default function MasterView() {
     return(
         <div style={contentBox}>
             <SectionItem />
