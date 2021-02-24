@@ -10,8 +10,9 @@ export default function Navbar() {
 }
 
 const viewContainerStyle: CSSProperties = {
-
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '1rem'
+    padding: '1rem',
+    width: '100%',
+    height: '100%'
 };

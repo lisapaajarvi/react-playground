@@ -13,10 +13,8 @@ export default function MasterView() {
 };
 
 const contentBox: CSSProperties = {
-    background: 'purple',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
     height: '100%',
     margin: '0.5rem',
     justifyItems: 'stretch',

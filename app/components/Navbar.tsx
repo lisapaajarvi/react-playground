@@ -12,6 +12,7 @@ const navbar: CSSProperties = {
     height: '20%',
     background: 'purple',
     color: 'white',
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '1rem'
