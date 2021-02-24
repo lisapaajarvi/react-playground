@@ -8,8 +8,8 @@ export default function SectionItem(props: Props) {
     const imageSrc = `../assets/${props.id}.jpg`;
 
     return(
-        <div style={{ ...gridItem, ...centeredContent }}>
-            <img src={imageSrc} style={fullscreen} />
+        <div style={{ ...gridItem, ...centeredContent, ...itemStyle }}>
+            <img src={imageSrc} style={{...fullscreen, ...itemStyle}} />
             <h2 style={{ ...centeredAbsolute, ...title}}>{props.id}</h2>
         </div>
     )
@@ -50,3 +50,7 @@ const centeredContent: CSSProperties = {
     alignItems: 'center',
     textAlign: 'center'
 };
+
+const itemStyle: CSSProperties = {
+    borderRadius: '1rem',
+}
