@@ -1,9 +1,10 @@
 import React, { CSSProperties } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return(
         <div style={navbar}>
-            <h1 style={title}>React Playground</h1>
+            <Link to="/" style={title}>React Playground</Link>
         </div>
     );
 }
