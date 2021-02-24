@@ -1,13 +1,17 @@
 import React, { CSSProperties } from 'react';
-import SectionItem from './SectionItem';
+import NavigationItem from './NavigationItem';
 
-export default function MasterView() {
+interface Props {
+    sectionIds: string[]
+}
+export default function MasterView(props: Props) {
 
-    const sectionIds = ['forest', 'sky', 'desert'];
+
 
     return(
         <div style={contentBox}>
-            {sectionIds.map((value) => <SectionItem id={value} />)}
+            {props.sectionIds.map((value) => 
+            <NavigationItem id={value} />)}
         </div>
     )
 };

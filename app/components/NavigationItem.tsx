@@ -1,17 +1,19 @@
 import React, {CSSProperties} from 'react';
+import {Link} from 'react-router-dom';
 
 interface Props {
     id: string
 }
 
-export default function SectionItem(props: Props) {
+export default function NavigationItem(props: Props) {
+    const url = `${props.id}`;
     const imageSrc = `../assets/${props.id}.jpg`;
 
     return(
-        <div style={{ ...gridItem, ...centeredContent, ...itemStyle }}>
+        <Link to={url} style={{ ...gridItem, ...centeredContent, ...itemStyle }}>
             <img src={imageSrc} style={{...fullscreen, ...itemStyle}} />
             <h2 style={{ ...centeredAbsolute, ...title}}>{props.id}</h2>
-        </div>
+        </Link>
     )
 }
 
