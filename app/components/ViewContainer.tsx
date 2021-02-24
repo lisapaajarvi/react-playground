@@ -14,5 +14,6 @@ const viewContainerStyle: CSSProperties = {
     justifyContent: 'center',
     padding: '1rem',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    background: 'purple'
 };
