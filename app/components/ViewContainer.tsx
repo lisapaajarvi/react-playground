@@ -1,19 +1,24 @@
-import React, { Fragment, CSSProperties } from 'react';
-import MasterView from './MasterView';
-import DetailView from './DetailView';
+import React, { Suspense, CSSProperties } from 'react';
 import { Route } from 'react-router-dom';
+import MasterView from './MasterView';
+
+//const MasterView = React.lazy (()=> import(/*webpackChunkName: "masterView" */ './MasterView'));
+const DetailView = React.lazy (()=> import(/* webpackChunkName: "detailView" */ './DetailView'));
+
 
 export default function ViewContainer() {
     const sectionIds = ['forest', 'sky', 'desert'];
     
     return(
-        <div style={viewContainerStyle} >
+        <div style={viewContainerStyle} >           
             <Route exact path="/" render={() => 
                 <MasterView sectionIds={sectionIds}/>
             }/>
-            <Route path="/forest" component={DetailView}/>
-            <Route path="/sky" component={DetailView}/>
-            <Route path="/desert" component={DetailView}/>
+            <Suspense fallback={<div>Loading</div>}>
+                <Route path="/forest" component={DetailView}/>
+                <Route path="/sky" component={DetailView}/>
+                <Route path="/desert" component={DetailView}/>
+            </Suspense>
         </div>
     );
 }
